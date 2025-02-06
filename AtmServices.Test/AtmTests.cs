@@ -45,4 +45,27 @@ public class AtmTests
         Assert.Equal(100, testAtm.getBalance());
 
     }
+
+
+    //last test for sanity 
+    //this is a test of success
+    [Fact]
+    public void Test_Withdraw_And_Deposit()
+    {
+        //we are testing withdraw and checking it with assert statment
+        var result = testAtm.withdraw(25);
+        Assert.True(result);
+        //checking to see if balance got updated 
+        Assert.Equal(75, testAtm.getBalance());
+
+
+        var resultOfDeposit = testAtm.deposit(25);
+        Assert.True(resultOfDeposit);
+        //checking to see if balance got updated 
+        Assert.Equal(100, testAtm.getBalance());
+
+    }
+
+
+
 }
