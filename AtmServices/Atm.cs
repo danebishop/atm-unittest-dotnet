@@ -16,7 +16,6 @@ public class Atm
             return true;
         }
         return false; 
-
     }
 
     public bool deposit(int amount){
@@ -25,12 +24,9 @@ public class Atm
         }
         balance += amount; 
         return true;
-
     }
 
     public int getBalance(){
         return balance;
     }
-
-
 }

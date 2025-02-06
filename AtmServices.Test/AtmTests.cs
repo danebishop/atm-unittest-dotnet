@@ -46,6 +46,20 @@ public class AtmTests
 
     }
 
+     //this is third test, need fact at start of each test 
+    //this is a test of failure for deposit to get coverage to 100%
+    [Fact]
+    public void Test_Deposit_Failure()
+    {
+        //we are testing withdraw and checking it with assert statment
+        var result = testAtm.deposit(-10);
+        Assert.False(result);
+
+        //checking to see if balance got updated 
+        Assert.Equal(100, testAtm.getBalance());
+
+    }
+
 
     //last test for sanity 
     //this is a test of success
